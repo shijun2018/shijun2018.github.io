@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <meta name="yandex-verification" content="3ac9ae36ddebb425">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.0',
+    exturl: true,
+    sidebar: {"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: true,
+    lazyload: true,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"preload":true},
+    path: 'search.json',
+    motion: {"enable":false},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="💥 Breaking ChangesRemove gitment support (#939)In NexT _config.yml: -# Gitment-# Introduction: https://github.com/imsun/gitment-gitment:-  enable: false-  mint: true # RECOMMEND, A mint on Gitment, t">
+<meta name="keywords" content="android, java">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NexT 7.2.0 Released">
+<meta property="og:url" content="http://www.sitcamp.com/bak/next-7-2-0-released.html">
+<meta property="og:site_name" content="云智学院">
+<meta property="og:description" content="💥 Breaking ChangesRemove gitment support (#939)In NexT _config.yml: -# Gitment-# Introduction: https://github.com/imsun/gitment-gitment:-  enable: false-  mint: true # RECOMMEND, A mint on Gitment, t">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-14T03:57:01.316Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NexT 7.2.0 Released">
+<meta name="twitter:description" content="💥 Breaking ChangesRemove gitment support (#939)In NexT _config.yml: -# Gitment-# Introduction: https://github.com/imsun/gitment-gitment:-  enable: false-  mint: true # RECOMMEND, A mint on Gitment, t">
+  <link rel="canonical" href="http://www.sitcamp.com/bak/next-7-2-0-released">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: false,
+    isPage: true,
+    isArchive: false
+  };
+</script>
+
+  <title>NexT 7.2.0 Released | 云智学院</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">云智学院</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+          
+          
+          
+            
+            
+    
+  
+  <li class="menu-item menu-item-maven教程">
+      
+    
+
+    <a href="/maven/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>Maven教程</a>
+
+  </li>
+
+
+          
+        
+          
+          
+          
+        
+      
+      
+      
+      
+        
+          
+          
+          
+            
+            
+    
+  
+  <li class="menu-item menu-item-docs">
+      
+    
+
+    <a href="/docs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>NexT文档</a>
+
+  </li>
+
+
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+          
+          
+          
+        
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0" title="Fork NexT on GitHub" aria-label="Fork NexT on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+    
+    
+      
+      
+
+        
+        
+        
+        
+
+      
+    
+      
+      
+
+        
+        
+        
+        
+
+      
+    
+    
+
+  
+
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h2 class="post-title" itemprop="name headline">NexT 7.2.0 Released<span class="exturl post-edit-link" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvdGhlbWUtbmV4dC5vcmcvZWRpdC9zb3VyY2Uvc291cmNlL2Jhay9uZXh0LTctMi0wLXJlbGVhc2VkLm1k" title="编辑"><i class="fa fa-pencil"></i></span>
+
+</h2>
+
+<div class="post-meta">
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+          <h2 id="💥-Breaking-Changes"><a href="#💥-Breaking-Changes" class="headerlink" title="💥 Breaking Changes"></a>💥 Breaking Changes</h2><h3 id="Remove-gitment-support-939"><a href="#Remove-gitment-support-939" class="headerlink" title="Remove gitment support (#939)"></a>Remove gitment support (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTM5" title="https://github.com/theme-next/hexo-theme-next/pull/939">#939<i class="fa fa-external-link"></i></span>)</h3><p>In NexT <code>_config.yml</code>:</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-# Gitment</span></span><br><span class="line"><span class="deletion">-# Introduction: https://github.com/imsun/gitment</span></span><br><span class="line"><span class="deletion">-gitment:</span></span><br><span class="line"><span class="deletion">-  enable: false</span></span><br><span class="line"><span class="deletion">-  mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span></span><br><span class="line"><span class="deletion">-  count: true # Show comments count in post meta area</span></span><br><span class="line"><span class="deletion">-  lazy: false # Comments lazy loading with a button</span></span><br><span class="line"><span class="deletion">-  cleanly: false # Hide 'Powered by ...' on footer, and more</span></span><br><span class="line"><span class="deletion">-  language: # Force language, or auto switch by theme</span></span><br><span class="line"><span class="deletion">-  github_user: # MUST HAVE, Your Github Username</span></span><br><span class="line"><span class="deletion">-  github_repo: # MUST HAVE, The name of the repo you use to store Gitment comments</span></span><br><span class="line"><span class="deletion">-  client_id: # MUST HAVE, Github client id for the Gitment</span></span><br><span class="line"><span class="deletion">-  client_secret: # EITHER this or proxy_gateway, Github access secret token for the Gitment</span></span><br><span class="line"><span class="deletion">-  proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect</span></span><br><span class="line"><span class="deletion">-  redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled</span></span><br></pre></td></tr></table></figure>
+<h3 id="Remove-Han-support-912"><a href="#Remove-Han-support-912" class="headerlink" title="Remove Han support (#912)"></a>Remove Han support (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTEy" title="https://github.com/theme-next/hexo-theme-next/pull/912">#912<i class="fa fa-external-link"></i></span>)</h3><p>In NexT <code>_config.yml</code>:</p>
+<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-# Han Support</span></span><br><span class="line"><span class="deletion">-# Dependencies: https://github.com/theme-next/theme-next-han</span></span><br><span class="line"><span class="deletion">-han: false</span></span><br><span class="line"><span class="deletion">-</span></span><br><span class="line"><span class="deletion">-  # Internal version: 3.3.0</span></span><br><span class="line"><span class="deletion">-  # See: https://github.com/ethantw/Han</span></span><br><span class="line"><span class="deletion">-  # Example:</span></span><br><span class="line"><span class="deletion">-  # han: //cdn.jsdelivr.net/npm/han-css@3/dist/han.min.css</span></span><br><span class="line"><span class="deletion">-  # han: //cdnjs.cloudflare.com/ajax/libs/Han/3.3.0/han.min.css</span></span><br><span class="line"><span class="deletion">-  han:</span></span><br></pre></td></tr></table></figure>
+<h2 id="🌀-External-Changes"><a href="#🌀-External-Changes" class="headerlink" title="🌀 External Changes"></a>🌀 External Changes</h2><ul>
+<li>Remove unneeded leancloud-storage in <code>theme.vendors</code> (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTI3" title="https://github.com/theme-next/hexo-theme-next/pull/927">#927<i class="fa fa-external-link"></i></span>)</li>
+<li>Make Valine available (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTI2" title="https://github.com/theme-next/hexo-theme-next/pull/926">#926<i class="fa fa-external-link"></i></span>)</li>
+<li>Upgrade the internal jQuery to v3.4.1 (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTAz" title="https://github.com/theme-next/hexo-theme-next/pull/903">#903<i class="fa fa-external-link"></i></span>)</li>
+</ul>
+<h2 id="⭐-Features"><a href="#⭐-Features" class="headerlink" title="⭐ Features"></a>⭐ Features</h2><ul>
+<li>Provide an optional icon option for tags at the bottom of the post (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvODk2" title="https://github.com/theme-next/hexo-theme-next/pull/896">#896<i class="fa fa-external-link"></i></span>)</li>
+</ul>
+<h2 id="🛠-Improvements"><a href="#🛠-Improvements" class="headerlink" title="🛠 Improvements"></a>🛠 Improvements</h2><ul>
+<li>Refactoring post-meta-divider (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTM3" title="https://github.com/theme-next/hexo-theme-next/pull/937">#937<i class="fa fa-external-link"></i></span>)</li>
+<li>Remove unnecessary statements in swig templates (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTI4" title="https://github.com/theme-next/hexo-theme-next/pull/928">#928<i class="fa fa-external-link"></i></span>)</li>
+<li>Use hyphen instead of en dash (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTA3" title="https://github.com/theme-next/hexo-theme-next/pull/907">#907<i class="fa fa-external-link"></i></span>)</li>
+<li>Ignore leancloud visitor from localhost (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTE2" title="https://github.com/theme-next/hexo-theme-next/pull/916">#916<i class="fa fa-external-link"></i></span>)</li>
+<li>Fix word spelling (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTEz" title="https://github.com/theme-next/hexo-theme-next/pull/913">#913<i class="fa fa-external-link"></i></span>)</li>
+<li>Correct the outdated version number of FontAwesome (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTA1" title="https://github.com/theme-next/hexo-theme-next/pull/905">#905<i class="fa fa-external-link"></i></span>)</li>
+<li>Improve page rendering by deferring disqus loading (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvODkx" title="https://github.com/theme-next/hexo-theme-next/pull/891">#891<i class="fa fa-external-link"></i></span>)</li>
+<li>Make Tabs flexible (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvNzA0" title="https://github.com/theme-next/hexo-theme-next/pull/704">#704<i class="fa fa-external-link"></i></span>)</li>
+<li>Restore the previous selection for <code>copy_button</code> (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvODkw" title="https://github.com/theme-next/hexo-theme-next/pull/890">#890<i class="fa fa-external-link"></i></span>)</li>
+</ul>
+<h2 id="🐞-Bug-Fixes"><a href="#🐞-Bug-Fixes" class="headerlink" title="🐞 Bug Fixes"></a>🐞 Bug Fixes</h2><ul>
+<li>Refactoring post-meta-divider (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTM3" title="https://github.com/theme-next/hexo-theme-next/pull/937">#937<i class="fa fa-external-link"></i></span>)</li>
+<li>Fix referer used by LiveRe on non-post pages (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvOTM0" title="https://github.com/theme-next/hexo-theme-next/pull/934">#934<i class="fa fa-external-link"></i></span>)</li>
+<li>Force include source/lib/font-awesome/ (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvODMy" title="https://github.com/theme-next/hexo-theme-next/pull/832">#832<i class="fa fa-external-link"></i></span>)</li>
+</ul>
+<h2 id="📖-Documentation"><a href="#📖-Documentation" class="headerlink" title="📖 Documentation"></a>📖 Documentation</h2><ul>
+<li>Add detailed description about RSS (<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3B1bGwvODk1" title="https://github.com/theme-next/hexo-theme-next/pull/895">#895<i class="fa fa-external-link"></i></span>)</li>
+</ul>
+<hr>
+<p>For full changes, see the <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L2NvbXBhcmUvdjcuMS4yLi4udjcuMi4w" title="https://github.com/theme-next/hexo-theme-next/compare/v7.1.2...v7.2.0">comparison between v7.1.2 and v7.2.0<i class="fa fa-external-link"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQvaGV4by10aGVtZS1uZXh0L3JlbGVhc2VzL3RhZy92Ny4yLjA=" title="https://github.com/theme-next/hexo-theme-next/releases/tag/v7.2.0">Detailed changes for NexT v7.2.0<i class="fa fa-external-link"></i></span></p>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+    
+    
+  <div class="comments" id="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+  
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#💥-Breaking-Changes"><span class="nav-number">1.</span> <span class="nav-text">💥 Breaking Changes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-gitment-support-939"><span class="nav-number">1.1.</span> <span class="nav-text">Remove gitment support (#939)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Remove-Han-support-912"><span class="nav-number">1.2.</span> <span class="nav-text">Remove Han support (#912)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🌀-External-Changes"><span class="nav-number">2.</span> <span class="nav-text">🌀 External Changes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#⭐-Features"><span class="nav-number">3.</span> <span class="nav-text">⭐ Features</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🛠-Improvements"><span class="nav-number">4.</span> <span class="nav-text">🛠 Improvements</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🐞-Bug-Fixes"><span class="nav-number">5.</span> <span class="nav-text">🐞 Bug Fixes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#📖-Documentation"><span class="nav-number">6.</span> <span class="nav-text">📖 Documentation</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/uploads/custom-logo.jpg"
+      alt="智者事成">
+  <p class="site-author-name" itemprop="name">智者事成</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+  </nav>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RoZW1lLW5leHQ=" title="GitHub &rarr; https://github.com/theme-next"><i class="fa fa-fw fa-github"></i></span>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <span class="exturl" data-url="bWFpbHRvOnN1cHBvcnRAdGhlbWUtbmV4dC5vcmc=" title="E-Mail &rarr; mailto:support@theme-next.org"><i class="fa fa-fw fa-envelope"></i></span>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <span class="exturl" data-url="aHR0cHM6Ly9naXR0ZXIuaW0vdGhlbWUtbmV4dA==" title="Gitter &rarr; https://gitter.im/theme-next"><i class="fa fa-fw fa-github-alt"></i></span>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <span class="exturl" data-url="aHR0cHM6Ly9yaW90LmltL2FwcC8jL3Jvb20vI05leFQ6bWF0cml4Lm9yZw==" title="Riot &rarr; https://riot.im/app/#/room/#NexT:matrix.org"><i class="fa fa-fw fa-bullhorn"></i></span>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <span class="exturl" data-url="aHR0cHM6Ly90Lm1lL2pvaW5jaGF0L0dVTkhYQS12WmtnU011aW1MMVZtTXc=" title="Telegram [Chat] &rarr; https://t.me/joinchat/GUNHXA-vZkgSMuimL1VmMw"><i class="fa fa-fw fa-telegram"></i></span>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+      
+        
+      
+        <span class="exturl" data-url="aHR0cHM6Ly90Lm1lL3RoZW1lX25leHQ=" title="Telegram [News] &rarr; https://t.me/theme_next"><i class="fa fa-fw fa-paper-plane"></i></span>
+      </span>
+    
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    
+  
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+<div class="cc-license motion-element" itemprop="sponsor">
+  <span class="exturl cc-opacity" title="Deploy with Netlify → https://www.netlify.com" data-url="aHR0cHM6Ly93d3cubmV0bGlmeS5jb20="><img width="80" src="https://www.netlify.com/img/global/badges/netlify-dark.svg" alt="Netlify"></span>
+</div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+         <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NexT  |  </span>
+<a href="http://www.miitbeian.gov.cn/">渝ICP备18016026号</a>
+
+
+<span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Gemini</span> v7.4.0</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+
+
+    
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+<script src="/js/utils.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
+
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.4.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://theme-next.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  function disqus_config() {
+    this.page.url = "http://www.sitcamp.com/bak/next-7-2-0-released.html";
+    this.page.identifier = "bak/next-7-2-0-released.html";
+    this.page.title = 'NexT 7.2.0 Released';};
+  function loadComments() {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://theme-next.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  }
+    (function() {
+      var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
+      if (offsetTop <= 0) {
+        // load directly when there's no a scrollbar
+        window.addEventListener('load', loadComments, false);
+      } else {
+        var disqus_scroll = () => {
+          // offsetTop may changes because of manually resizing browser window or lazy loading images.
+          var offsetTop = document.getElementById('comments').offsetTop - window.innerHeight;
+          var scrollTop = window.scrollY;
+
+          // pre-load comments a bit? (margin or anything else)
+          if (offsetTop - scrollTop < 60) {
+            window.removeEventListener('scroll', disqus_scroll);
+            loadComments();
+          }
+        };
+        window.addEventListener('scroll', disqus_scroll);
+      }
+    })();
+  
+</script>
+
+</body>
+</html>
